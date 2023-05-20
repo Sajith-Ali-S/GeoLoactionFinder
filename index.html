@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocation Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="white">
+        <h1>TimeZone API</h1>
+        <!--userCurrentTimeZone Info-->
+        <section id="user-location-container">
+        <h2>Your Current Time Zone</h2>
+        <!-- user timezone box -->
+        <div class="box box1">
+            <!-- getting data dynamically by js -->
+            <!-- <p><span>Name of the Time Zone:</span></p>
+            <p style="display:flex; justify-content:flex-start"><span >Lat: </span><span>Long: </span></p>
+            <p>Offset STD: </p>
+            <p>Offset STD Seconds: </p>
+            <p>Offset DST: </p>
+            <p>Offset DST Seconds: </p>
+            <p>Country: </p>
+            <p>Postcode: </p>
+            <p>City: </p> -->
+        </div>
+        </section>
+    </div>
+    <div class="black">
+          <!-- Enter Address Box -->
+    <section id="enter-address-container">
+        <h2>Enter Address</h2>
+        <div>
+        <input class="address" placeholder="Address" style="background-color:black;
+        color: #ffffff;width: 600px;height: 25px;
+        border: 2px solid #ffffff" class="address">
+        </div>
+        <button id="submit">Submit</button>
+        <div class="error"></div>
+    </section>
+
+    <!-- Result TimeZone -->
+    <section id="result-container">
+        <h2 style="display: none;">Your Result</h2>
+        <!-- result timezone box -->
+        <div class="box box2">
+         <!-- getting data dynamically by js -->
+        </div>
+
+    </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
