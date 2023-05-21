@@ -19,9 +19,9 @@ if(navigator.geolocation){
 
 function showCurrentTimezone(currentPosition){
     const latitude = currentPosition.coords.latitude;
-    const longitude = currentPosition.coords.latitude;
-
-    const url = `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&format=json&apiKey=23cc2c6ecec44c51bf1c77ab6ba17bec`;
+    const longitude = currentPosition.coords.longitude;
+    const APIKey = "1e5c094e31934dd1a100cec951893977";
+    const url = `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${APIKey}`;
 
     fetch(url)
     .then(response => response.json())
@@ -66,7 +66,7 @@ function fetchDetailsByAddress(){
     }
 
     // Convert address to coordinates using geocoding API
-    const geocodingUrl = `https://api.geoapify.com/v1/geocode/search?text=${address}&apiKey=23cc2c6ecec44c51bf1c77ab6ba17bec`;
+    const geocodingUrl = `https://api.geoapify.com/v1/geocode/search?text=${address}&apiKey=${APIKey}`;
 
     fetch(geocodingUrl)
         .then(response => response.json())
@@ -75,7 +75,7 @@ function fetchDetailsByAddress(){
             const latitude = res.features[0].properties.lat;
             const longitude = res.features[0].properties.lon;
             
-            const timezoneUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&format=json&apiKey=23cc2c6ecec44c51bf1c77ab6ba17bec`;
+            const timezoneUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&format=json&apiKey=${APIKey}`;
 
             fetch(timezoneUrl)
                 .then(response => response.json())
