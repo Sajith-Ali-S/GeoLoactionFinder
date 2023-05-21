@@ -1,5 +1,5 @@
 
-/getting reference of required html elements
+//getting reference of required html elements
 const userContainer = document.querySelector(".box1");
 const addressContainer = document.querySelector(".box2");
 const resultContainer = document.querySelector("#result-container");
